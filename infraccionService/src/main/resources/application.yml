@@ -1,0 +1,20 @@
+server:
+  port: 8095
+  servlet:
+    context-path: /adm-infracciones/api/v1/
+spring:
+  application:
+    name: infraccionService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbinfracciones
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
